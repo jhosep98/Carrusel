@@ -10,7 +10,6 @@
 }
 
 .direction > .item {
-  /* width: 100px; */
   margin: 15px;
 }
 
@@ -20,30 +19,16 @@
   margin-bottom: 30px;
 }
 
-.carousel, .carousel-inner > .item > img {
-  width: 512px;
-  height: 288px;
-  
-}
-
-.container{
-  display: flex;
-  justify-content:center;
-  margin-left: 125px;
+.contenedor{
   padding: 0px;
-  
+  margin: 0px;  
 }
-
-.elegir {
+ 
+.contenedordecaja{
   display: flex;
   justify-content:center;
-  margin: 0px ;
+  width: 100%;
 }
- .elegir > div > button {
-  margin: 200px 0px 0px 100px;
-  display: flex;
-  justify-content:center;
- }
  .box{
   width: 512px;
   height: 288px;

@@ -13,79 +13,93 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./normalize.css" />
+    
   </head>
   <body>
+  <div>
     <h1 class="title">Carousel Example</h1>
-    <div class="container">
-      <div
-        id="myCarousel"
-        class="carousel slide"
-        data-ride="carousel"
-        data-interval="false"
-      >
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="./img/animex4.jpg" alt="" style="width:100%;" />
-          </div>
-
-          <div class="item">
-            <img src="./img/animex4.jpg" alt="" style="width:100%;" />
-          </div>
-
-          <div class="item">
-            <img src="./img/animex4.jpg" alt="" style="width:100%;" />
-          </div>
-        </div>
+    <div class="contenedor">
+      <div class="estilo"  style="display: flex; width:100%; height:auto;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288"/>
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 50%;" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 50px 50px 0px 0px;" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 20%;" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px; height:auto;" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+          <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="opacity: 0.5;" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="filter: grayscale(100%);" />
+      </div>
+      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
+        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" />
       </div>
     </div>
 
     <!-- botones de configuracion -->
 
     <!-- boton anterior -->
-  <div class="direction">
+    <div class="direction">
       <div class="item">
-        <button type="button" class="btn btn-primary">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="plusDivs(-1)">
+          Anterior
+        </button>
       </div>
 
       <!-- Botones radio -->
-    <div class="item">
-      <div class="custom-control custom-radio ">
-        <input
-          type="radio"
-          class="custom-control-input "
-          id="defaultUnchecked"
-          name="defaultExampleRadios"
-        />
-        <label class="custom-control-label" for="defaultUnchecked">Left</label>
-        <input
-          type="radio"
-          class="custom-control-input "
-          id="defaultUnchecked"
-          name="defaultExampleRadios"
-        />
-        <label class="custom-control-label" for="defaultUnchecked"
-          >Center</label
-        >
-        <input
-          type="radio"
-          class="custom-control-input "
-          id="defaultUnchecked"
-          name="defaultExampleRadios"
-        />
-        <label class="custom-control-label" for="defaultUnchecked">Right</label>
+      <div class="item">
+        <div class="custom-control custom-radio ">
+          <input
+            type="radio"
+            class="custom-control-input "
+            id="defaultUnchecked"
+            name="defaultExampleRadios"
+            value='flex-start'
+          />
+          <label class="custom-control-label" for="defaultUnchecked"
+            >Left</label
+          >
+          <input
+            type="radio"
+            class="custom-control-input "
+            id="defaultUnchecked"
+            name="defaultExampleRadios"
+            value='center'
+          />
+          <label class="custom-control-label" for="defaultUnchecked"
+            >Center</label
+          >
+          <input
+            type="radio"
+            class="custom-control-input "
+            id="defaultUnchecked"
+            name="defaultExampleRadios"
+            value='flex-end'
+          />
+          <label class="custom-control-label" for="defaultUnchecked"
+            >Right</label
+          >
+        </div>
       </div>
-    </div>
-
+    
       <!-- Botton Siguiente -->
       <div class="item">
-        <button type="button" class="btn btn-primary">Siguiente</button>
+        <button type="button" class="btn btn-primary" onclick="plusDivs(+1)">
+          Siguiente
+        </button>
       </div>
     </div>
 
-
-      <!-- inputs Width and height -->
+    <!-- inputs Width and height -->
     <div class="resolution">
       <form class="form-inline">
         <div class="form-group">
@@ -93,35 +107,40 @@
           <input
             id="width"
             class="form-control mx-sm-3"
-            type="text"
-            placeholder="512px"
+            type="number"
+            name="imgheight"
+            value="512"
+            min="1"
+            max="30000"
+            onchange="sizeWidth(this.value)"
           />
           <label for="height">Height</label>
           <input
             id="height"
             class="form-control mx-sm-3"
-            type="text"
-            placeholder="288px"
+            type="number"
+            value="288"
+            name="valueheight"
+            min="1"
+            max="30000"
+            onchange="sizeHeight(this.value)"
           />
-        </div>
+       </div>
       </form>
     </div>
 
-
     <!-- caja de la imagen -->
-    <div class="elegir">
+    <div class= contenedordecaja>
       <div class="box"></div>
     </div>
-    <div class="copy"><button type="button" class="btn btn-danger ">Copy</button></div>
-  </body>
-</html>
 
-<!-- Left and right controls -->
-<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a> -->
+    <div class="copy">
+      <button type="button" class="btn btn-danger ">Copy</button>
+    </div>
+  </div>
+
+    <!-- JAvaScript -->
+    <script src="./app.js"></script>
+  </body>
+  
+</html>
