@@ -23,12 +23,6 @@
         data-ride="carousel"
         data-interval="false"
       >
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
@@ -48,10 +42,15 @@
     </div>
 
     <!-- botones de configuracion -->
-    <div class="direction">
-      <div class="item3">
+
+    <!-- boton anterior -->
+  <div class="direction">
+      <div class="item">
         <button type="button" class="btn btn-primary">Anterior</button>
       </div>
+
+      <!-- Botones radio -->
+    <div class="item">
       <div class="custom-control custom-radio ">
         <input
           type="radio"
@@ -77,9 +76,17 @@
         />
         <label class="custom-control-label" for="defaultUnchecked">Right</label>
       </div>
-      <div class="item2">
+    </div>
+
+      <!-- Botton Siguiente -->
+      <div class="item">
         <button type="button" class="btn btn-primary">Siguiente</button>
       </div>
+    </div>
+
+
+      <!-- inputs Width and height -->
+    <div class="resolution">
       <form class="form-inline">
         <div class="form-group">
           <label for="width">Width</label>
@@ -100,11 +107,12 @@
       </form>
     </div>
 
+
     <!-- caja de la imagen -->
     <div class="elegir">
       <div class="box"></div>
     </div>
-    <div><button type="button" class="btn btn-danger Copiar">Copy</button></div>
+    <div class="copy"><button type="button" class="btn btn-danger ">Copy</button></div>
   </body>
 </html>
 
