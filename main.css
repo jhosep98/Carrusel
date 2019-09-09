@@ -1,0 +1,63 @@
+.direction {
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 700px;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-left: 350px;
+  
+}
+.title {
+  text-align: center;   
+}
+
+.direction > .item {
+  width: 100px;
+  margin: 15px;
+}
+.item2{
+  margin-left: 20px;
+}
+.margin3 {
+  margin-right: 20px; 
+}
+
+.carousel, .carousel-inner > .item > img {
+  width: 700px;
+  height: 380px;
+  
+}
+
+.container{
+  display: flex;
+  justify-content:center;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.elegir {
+  display: flex;
+  justify-content:center;
+  margin: 0px ;
+}
+ .elegir > div > button {
+  margin: 200px 0px 0px 100px;
+  display: flex;
+  justify-content:center;
+ }
+ .box{
+  width: 700px;
+  height: 380px;
+  border: 2px solid black;
+  margin: 0px;
+  padding: 0px;
+}
+.Copiar {
+  margin-left: 620px;
+  margin-bottom: 20px;
+}
