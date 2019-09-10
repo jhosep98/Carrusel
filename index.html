@@ -11,37 +11,23 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js'></script>
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./normalize.css" />
-    
   </head>
+
   <body>
-  <div>
     <h1 class="title">Carousel Example</h1>
     <div class="contenedor">
-      <div class="estilo"  style="display: flex; width:100%; height:auto;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288"/>
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 50%;" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 50px 50px 0px 0px;" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="border-radius: 20%;" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px; height:auto;" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-          <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="opacity: 0.5;" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="filter: grayscale(100%);" />
-      </div>
-      <div class="estilo" class="estilo"  style="display: flex; width:100%;">
-        <img src="./img/animex4.jpg" alt="" class="mySlides" id="img1" width="512" height="288" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" />
+      <div id="estilo">
+        <img
+          src="./img/animex4.jpg"
+          alt=""
+          class="mySlides"
+          id="img1"
+          width="512"
+          height="288"
+        />
       </div>
     </div>
 
@@ -50,7 +36,7 @@
     <!-- boton anterior -->
     <div class="direction">
       <div class="item">
-        <button type="button" class="btn btn-primary" onclick="plusDivs(-1)">
+        <button type="button" class="btn btn-primary" id="prev-style">
           Anterior
         </button>
       </div>
@@ -63,7 +49,7 @@
             class="custom-control-input "
             id="defaultUnchecked"
             name="defaultExampleRadios"
-            value='flex-start'
+            value="flex-start"
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Left</label
@@ -73,7 +59,7 @@
             class="custom-control-input "
             id="defaultUnchecked"
             name="defaultExampleRadios"
-            value='center'
+            value="center"
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Center</label
@@ -83,17 +69,17 @@
             class="custom-control-input "
             id="defaultUnchecked"
             name="defaultExampleRadios"
-            value='flex-end'
+            value="flex-end"
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Right</label
           >
         </div>
       </div>
-    
+
       <!-- Botton Siguiente -->
       <div class="item">
-        <button type="button" class="btn btn-primary" onclick="plusDivs(+1)">
+        <button type="button" class="btn btn-primary" id="next-style">
           Siguiente
         </button>
       </div>
@@ -125,22 +111,23 @@
             max="30000"
             onchange="sizeHeight(this.value)"
           />
-       </div>
+        </div>
       </form>
     </div>
 
     <!-- caja de la imagen -->
-    <div class= contenedordecaja>
-      <div class="box"></div>
+    <div class="contenedordecaja">
+      <textarea class="box" id="textarea"></textarea>
     </div>
 
-    <div class="copy">
-      <button type="button" class="btn btn-danger ">Copy</button>
+    <div class="copiar">
+      <button type="button" class="btn btn-danger" onclick="copy()">
+        Copy
+      </button>
     </div>
-  </div>
 
     <!-- JAvaScript -->
+
     <script src="./app.js"></script>
   </body>
-  
 </html>
