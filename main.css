@@ -1,45 +1,49 @@
+body {
+  font-size: 17px;
+}
+
 .title {
-  text-align: center;   
+  text-align: center;
 }
 
 .direction {
   display: flex;
-  justify-content:center;
-  margin-top: 25px;
-  margin-bottom: 30px;
+  justify-content: center;
+  clear: both;
 }
 
 .direction > .item {
   margin: 15px;
 }
 
-.resolution{
+.resolution {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.contenedor{
-  padding: 0px;
-  margin: 0px;  
-}
- 
-.contenedordecaja{
-  display: flex;
-  justify-content:center;
+.contenedor {
   width: 100%;
 }
- .box{
-  width: 512px;
+
+.contenedordecaja {
+  text-align: center;
+  width: 100%;
+  clear: both;
+}
+
+.box {
+  width: 550px;
   height: 288px;
   border: 2px solid black;
-  margin: 0px;
-  padding: 0px;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 8%;
+  clear: both;
 }
+
 .copiar {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-top: 10px;
+  clear: both;
 }

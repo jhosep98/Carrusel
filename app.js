@@ -1,15 +1,14 @@
 // CAMBIO DE IMAGENES EN EL CARRUSEL
 $(_ => {
   const STYLE_DEFAULT = {
-    divStyle: {
-      display: "flex",
-      width: "100%"
+    aStyle: {
+      display: "block"
     }
   };
 
   const STYLES = [
     {
-      divStyle: { justifyContent:'center' },
+      aStyle: { textAlign: "center" },
       imgStyle: {
         width: "512px",
         height: "288px"
@@ -60,40 +59,46 @@ $(_ => {
       }
     }
   ];
-// alignstyle
-  let alignStyle = {}  
+  // alignstyle
+  let alignStyle = {};
 
   // widthstyle
 
-  let widthStyle = {}
+  let widthStyle = {};
 
   // heightStyle
 
-  let heightStyle = {}
+  let heightStyle = {};
 
   // CAMBIAR EL WIDTH Y EL HEIGHT
 
   window.sizeWidth = function sizeWidth(width) {
-    document.querySelectorAll(".mySlides").forEach(e => (e.width = width));
-    
-  }
-  console.log(width)
-  
-  
-  window.sizeHeight = function sizeHeight(height) {
-    document.querySelectorAll(".mySlides").forEach(e => (e.height = height));
-  }
+    widthStyle = {
+      imgStyle: {
+        width: width
+      }
+    };
+    updateStyle();
+  };
 
-  
+  window.sizeHeight = function sizeHeight(height) {
+    heightStyle = {
+      imgStyle: {
+        height: height
+      }
+    };
+    updateStyle();
+  };
 
   // izquierda, centro o derecha imagen
 
   function size(s) {
     alignStyle = {
-      divStyle: {
-        justifyContent: s,
+      aStyle: {
+        float: s,
+        textAlign: s
       }
-    }
+    };
     updateStyle();
   }
 
@@ -126,17 +131,24 @@ $(_ => {
   // ACTUALIZAR LOS ESTILOS
 
   const updateStyle = _ => {
-    const style = window._.merge({}, STYLE_DEFAULT, STYLES[currentStyleIndex], alignStyle, widthStyle, heightStyle);
+    const style = window._.merge(
+      {},
+      STYLE_DEFAULT,
+      STYLES[currentStyleIndex],
+      alignStyle,
+      widthStyle,
+      heightStyle
+    );
 
-    const $preview = $("div#estilo");
-    const $previewImage = $("div#estilo > img");
+    const $preview = $("a#estilo");
+    const $previewImage = $("a#estilo > img");
 
     $preview.attr("style", "");
     $previewImage.attr("style", "");
 
-    $preview.css(style.divStyle);
+    $preview.css(style.aStyle);
     $previewImage.css(style.imgStyle);
- 
+
     $("#textarea").val($preview.get(0).outerHTML);
   };
 
@@ -146,13 +158,6 @@ $(_ => {
     let copyText = document.getElementById("textarea");
     copyText.select();
     document.execCommand("copy");
-  }
+  };
   updateStyle();
 });
-
-
-// const handler = ev => console.log(ev)
-
-// document.querySelector('div').addEventListener('click', handler)
-// $('div').click(handler)
-// $('div').on('click', handler)
