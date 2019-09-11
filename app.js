@@ -3,39 +3,42 @@ $(_ => {
   const STYLE_DEFAULT = {
     aStyle: {
       display: "block"
+    },
+    imgStyle: {
+      width: "357",
+      height: "200"
     }
   };
 
   const STYLES = [
     {
+      number: "001",
       aStyle: { textAlign: "center" },
       imgStyle: {
-        width: "512px",
-        height: "288px"
+        width: "357",
+        height: "200"
       }
     },
     {
+      number: "002",
       imgStyle: {
-        width: "512px",
-        height: "288px",
         borderRadius: "50%"
       }
     },
     {
+      number: "003",
       imgStyle: {
-        width: "512px",
-        height: "288px",
         borderRadius: "50px 50px 0px 0px"
       }
     },
     {
+      number: "004",
       imgStyle: {
-        width: "512px",
-        height: "288px",
         borderRadius: "20%"
       }
     },
     {
+      number: "005",
       imgStyle: {
         width: "150px",
         height: "auto",
@@ -45,17 +48,39 @@ $(_ => {
       }
     },
     {
+      number: "006",
       imgStyle: {
-        width: "512px",
-        height: "288px",
         opacity: "0.5"
       }
     },
     {
+      number: "007",
       imgStyle: {
-        width: "512px",
-        height: "288px",
         filter: "grayscale(100%)"
+      }
+    },
+    {
+      number: "008",
+      imgStyle: {
+        filter: "blur(5px)"
+      }
+    },
+    {
+      number: "009",
+      imgStyle: {
+        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)"
+      }
+    },
+    {
+      number: "010",
+      imgStyle: {
+        clipPath:"polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)"
+      }
+    },
+    {
+      number: "011",
+      imgStyle: {
+        clipPath:"polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)"
       }
     }
   ];
@@ -109,24 +134,26 @@ $(_ => {
   //  ANTERIOR Y SIGUIENTE IMAGEN
 
   let currentStyleIndex = 0;
+  
 
-  $("#prev-style").click(_ => {
+  $("#next-style").click(_ => {
     if (currentStyleIndex == STYLES.length - 1) {
       currentStyleIndex = 0;
-    } else {
-      currentStyleIndex += 1;
+    } else { 
+      currentStyleIndex += 1;  
     }
     updateStyle();
   });
 
-  $("#next-style").click(_ => {
+  $("#prev-style").click(_ => {
     if (currentStyleIndex == 0) {
       currentStyleIndex = STYLES.length - 1;
     } else {
-      currentStyleIndex -= 1;
+      currentStyleIndex -= 1;     
     }
     updateStyle();
   });
+
 
   // ACTUALIZAR LOS ESTILOS
 
@@ -139,6 +166,9 @@ $(_ => {
       widthStyle,
       heightStyle
     );
+
+     $('#account').val(currentStyleIndex + 1)
+    
 
     const $preview = $("a#estilo");
     const $previewImage = $("a#estilo > img");

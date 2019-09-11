@@ -4,6 +4,8 @@ body {
 
 .title {
   text-align: center;
+  margin-top: 0px;
+  margin-bottom: 1%;
 }
 
 .direction {
@@ -19,7 +21,7 @@ body {
 .resolution {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: auto;
 }
 
 .contenedor {
@@ -27,18 +29,19 @@ body {
 }
 
 .contenedordecaja {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
   width: 100%;
   clear: both;
 }
 
 .box {
-  width: 550px;
-  height: 288px;
+  width: 650px;
+  height: 160px;
   border: 2px solid black;
-  text-align: center;
-  padding-top: 8%;
   clear: both;
+  text-align: left; 
 }
 
 .copiar {
@@ -46,4 +49,18 @@ body {
   justify-content: center;
   margin-top: 10px;
   clear: both;
+}
+
+.numberEfect{
+ display: flex;
+ justify-content: center;
+}
+.inputEfect{
+  background-color: black;
+  color: yellow;
+  width:80px ;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid yellow;
+  margin-bottom: 2%;
 }

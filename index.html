@@ -19,15 +19,9 @@
   <body>
     <h1 class="title">Carousel Example</h1>
     <div class="contenedor">
-      <a id="estilo">
-        <img
-          src="./img/animex4.jpg"
-          class="mySlides"
-          id="img1"
-          width="512"
-          height="288"
-        />
-      </a>
+    <a id="estilo">
+<img src="./img/animex4.jpg" alt="" title=""/>
+</a>
     </div>
 
     <!-- botones de configuracion -->
@@ -59,6 +53,7 @@
             id="defaultUnchecked"
             name="defaultExampleRadios"
             value="center"
+            checked
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Center</label
@@ -83,6 +78,12 @@
         </button>
       </div>
     </div>
+    <!-- muestra el numero de efecto -->
+    <div class="numberEfect">
+      <label for="inputAccount">Efecto: </label>
+      <input type="text" class="inputEfect" id="account">
+    </div>
+
 
     <!-- inputs Width and height -->
     <div class="resolution">
@@ -94,7 +95,7 @@
             class="form-control mx-sm-3"
             type="number"
             name="imgheight"
-            value="512"
+            value="357"
             min="1"
             max="30000"
             onchange="sizeWidth(this.value)"
@@ -104,7 +105,7 @@
             id="height"
             class="form-control mx-sm-3"
             type="number"
-            value="288"
+            value="200"
             name="valueheight"
             min="1"
             max="30000"
@@ -120,7 +121,7 @@
     </div>
 
     <div class="copiar">
-      <button type="button" class="btn btn-danger" onclick="copy()">
+      <button type="button" class="btn btn-primary" onclick="copy()">
         Copy
       </button>
     </div>
