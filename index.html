@@ -7,11 +7,10 @@
     <title>Carrusel</title>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+      href="./links/bootstrap.min.css"/>
+    <script src="./links/jquery.min.js"></script>
+    <script src="./links/bootstrap.min.js"></script>
+    <script src="./links/lodash.min.js"></script>
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./normalize.css" />
   </head>
@@ -19,10 +18,10 @@
   <body>
     <h1 class="title">Carousel Example</h1>
     <div class="contenedor">
-    <a id="estilo">
-<img src="./img/animex4.jpg" alt="" title=""/>
+<a>
+<img src="./img/animex4.jpg" alt="" title="" />
 </a>
-    </div>
+</div>
 
     <!-- botones de configuracion -->
 
@@ -42,7 +41,7 @@
             class="custom-control-input "
             id="defaultUnchecked"
             name="defaultExampleRadios"
-            value="left"
+            value="flex-start"
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Left</label
@@ -63,7 +62,7 @@
             class="custom-control-input "
             id="defaultUnchecked"
             name="defaultExampleRadios"
-            value="right"
+            value="flex-end"
           />
           <label class="custom-control-label" for="defaultUnchecked"
             >Right</label
@@ -81,9 +80,8 @@
     <!-- muestra el numero de efecto -->
     <div class="numberEfect">
       <label for="inputAccount">Efecto: </label>
-      <input type="text" class="inputEfect" id="account">
+      <input type="text" class="inputEfect" id="account" />
     </div>
-
 
     <!-- inputs Width and height -->
     <div class="resolution">
@@ -125,7 +123,7 @@
         Copy
       </button>
     </div>
-
+</div>
     <!-- JAvaScript -->
 
     <script src="./app.js"></script>

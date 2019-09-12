@@ -11,7 +11,7 @@ body {
 .direction {
   display: flex;
   justify-content: center;
-  clear: both;
+  
 }
 
 .direction > .item {
@@ -24,8 +24,9 @@ body {
   margin-bottom: auto;
 }
 
-.contenedor {
-  width: 100%;
+.contenedor{
+  padding-left: 36%;
+  padding-right: 36%;
 }
 
 .contenedordecaja {
@@ -33,14 +34,12 @@ body {
   justify-content: center;
   margin-top: 2%;
   width: 100%;
-  clear: both;
 }
 
 .box {
   width: 650px;
-  height: 160px;
+  height: 110px;
   border: 2px solid black;
-  clear: both;
   text-align: left; 
 }
 
@@ -48,7 +47,6 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  clear: both;
 }
 
 .numberEfect{

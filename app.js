@@ -2,85 +2,86 @@
 $(_ => {
   const STYLE_DEFAULT = {
     aStyle: {
-      display: "block"
+      display: "flex",
+      width: "100%"
     },
     imgStyle: {
       width: "357",
-      height: "200"
+      height: "200",
     }
   };
 
   const STYLES = [
     {
       number: "001",
-      aStyle: { textAlign: "center" },
       imgStyle: {
         width: "357",
-        height: "200"
+        height: "200", 
       }
     },
     {
       number: "002",
       imgStyle: {
-        borderRadius: "50%"
+        borderRadius: "50%",     
       }
     },
     {
       number: "003",
       imgStyle: {
-        borderRadius: "50px 50px 0px 0px"
+        borderRadius: "50px 50px 0px 0px",    
       }
     },
     {
       number: "004",
       imgStyle: {
-        borderRadius: "20%"
+        borderRadius: "20%",   
       }
     },
     {
       number: "005",
       imgStyle: {
         width: "150px",
-        height: "auto",
+        height: "150px",
+        marginLeft:"10%",
         padding: "5px",
         borderRadius: "4px",
-        border: "1px solid #ddd"
+        border: "1px solid #ddd",      
       }
     },
     {
       number: "006",
       imgStyle: {
-        opacity: "0.5"
+        opacity: "0.5",    
       }
     },
     {
       number: "007",
       imgStyle: {
-        filter: "grayscale(100%)"
+        filter: "grayscale(100%)",       
       }
     },
     {
       number: "008",
       imgStyle: {
-        filter: "blur(5px)"
+        filter: "blur(5px)", 
       }
     },
     {
       number: "009",
       imgStyle: {
-        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)"
+        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",    
       }
     },
     {
       number: "010",
       imgStyle: {
-        clipPath:"polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)"
+        clipPath:"polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%,65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",  
       }
     },
     {
       number: "011",
       imgStyle: {
-        clipPath:"polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)"
+        clipPath:"polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)",
       }
     }
   ];
@@ -120,8 +121,7 @@ $(_ => {
   function size(s) {
     alignStyle = {
       aStyle: {
-        float: s,
-        textAlign: s
+        justifyContent: s,
       }
     };
     updateStyle();
@@ -134,13 +134,12 @@ $(_ => {
   //  ANTERIOR Y SIGUIENTE IMAGEN
 
   let currentStyleIndex = 0;
-  
 
   $("#next-style").click(_ => {
     if (currentStyleIndex == STYLES.length - 1) {
       currentStyleIndex = 0;
-    } else { 
-      currentStyleIndex += 1;  
+    } else {
+      currentStyleIndex += 1;
     }
     updateStyle();
   });
@@ -149,37 +148,40 @@ $(_ => {
     if (currentStyleIndex == 0) {
       currentStyleIndex = STYLES.length - 1;
     } else {
-      currentStyleIndex -= 1;     
+      currentStyleIndex -= 1;
     }
     updateStyle();
   });
 
-
   // ACTUALIZAR LOS ESTILOS
 
   const updateStyle = _ => {
-    const style = window._.merge(
+    const previewStyles = window._.merge(
       {},
       STYLE_DEFAULT,
       STYLES[currentStyleIndex],
-      alignStyle,
       widthStyle,
       heightStyle
     );
 
-     $('#account').val(currentStyleIndex + 1)
-    
+    const styles = window._.merge({}, alignStyle)
 
-    const $preview = $("a#estilo");
-    const $previewImage = $("a#estilo > img");
+    $("#account").val(currentStyleIndex + 1);
+
+    const $preview = $("a");
+    const $previewImage = $("a > img");
 
     $preview.attr("style", "");
     $previewImage.attr("style", "");
 
-    $preview.css(style.aStyle);
-    $previewImage.css(style.imgStyle);
+    $preview.css(previewStyles.aStyle);
+    $previewImage.css(previewStyles.imgStyle);
 
-    $("#textarea").val($preview.get(0).outerHTML);
+    const $clone = $preview.clone()
+
+    $clone.css(styles.aStyle)
+
+    $("#textarea").val($clone.get(0).outerHTML);
   };
 
   // COPIAR DEL TEXTAREA
