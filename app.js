@@ -3,11 +3,12 @@ $(_ => {
   const STYLE_DEFAULT = {
     aStyle: {
       display: "flex",
-      width: "100%"
+      width: "100%",
+      justifyContent:"center"
     },
     imgStyle: {
       width: "357",
-      height: "200",
+      height: "200",    
     }
   };
 
@@ -41,45 +42,64 @@ $(_ => {
       number: "005",
       imgStyle: {
         width: "150px",
-        height: "150px",
-        marginLeft:"10%",
+        height: "120px",
         padding: "5px",
         borderRadius: "4px",
-        border: "1px solid #ddd",      
+        border: "1px solid hsl(60, 100%, 93%)",      
       }
     },
     {
       number: "006",
       imgStyle: {
-        opacity: "0.5",    
+        width: "150px",
+        height: "120px",
+        padding: "5px",
+        borderRadius: "4px",
+        border: "1px solid #F21D51",      
       }
     },
     {
       number: "007",
       imgStyle: {
-        filter: "grayscale(100%)",       
+        width: "150px",
+        height: "120px",
+        padding: "5px",
+        borderRadius: "4px",
+        border: "1px solid #37E52F",      
       }
     },
     {
       number: "008",
       imgStyle: {
-        filter: "blur(5px)", 
+        opacity: "0.5",    
       }
     },
     {
       number: "009",
       imgStyle: {
-        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",    
+        filter: "grayscale(100%)",       
       }
     },
     {
       number: "010",
       imgStyle: {
-        clipPath:"polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%,65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",  
+        filter: "blur(5px)", 
       }
     },
     {
       number: "011",
+      imgStyle: {
+        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",    
+      }
+    },
+    {
+      number: "012",
+      imgStyle: {
+        clipPath:"polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%,65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",  
+      }
+    },
+    {
+      number: "013",
       imgStyle: {
         clipPath:"polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)",
       }
@@ -178,8 +198,8 @@ $(_ => {
     $previewImage.css(previewStyles.imgStyle);
 
     const $clone = $preview.clone()
-
-    $clone.css(styles.aStyle)
+    
+    styles.aStyle && $clone.css(styles.aStyle)
 
     $("#textarea").val($clone.get(0).outerHTML);
   };
