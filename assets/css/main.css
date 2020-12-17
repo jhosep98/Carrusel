@@ -1,5 +1,6 @@
 body {
-  font-size: 17px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
 }
 
 .title {
@@ -11,7 +12,6 @@ body {
 .direction {
   display: flex;
   justify-content: center;
-  
 }
 
 .direction > .item {
@@ -24,7 +24,7 @@ body {
   margin-bottom: auto;
 }
 
-.contenedor{
+.contenedor {
   padding-left: 36%;
   padding-right: 36%;
 }
@@ -40,7 +40,7 @@ body {
   width: 650px;
   height: 110px;
   border: 2px solid black;
-  text-align: left; 
+  text-align: left;
 }
 
 .copiar {
@@ -49,29 +49,29 @@ body {
   margin-top: 10px;
 }
 
-.numberEfect{
- display: flex;
- justify-content: center;
+.numberEfect {
+  display: flex;
+  justify-content: center;
 }
-.inputEfect{
+.inputEfect {
   background-color: black;
   color: yellow;
-  width:80px ;
+  width: 80px;
   font-size: 20px;
   text-align: center;
   border: 1px solid yellow;
   margin-bottom: 2%;
 }
-.boxContainer{
+.boxContainer {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: start;
   align-items: center;
 }
-.boxContainer > div{
-  margin-right:5px;
+.boxContainer > div {
+  margin-right: 5px;
 }
-.img{
-width: 40px !important;
-height: 40px !important;
+.img {
+  width: 40px !important;
+  height: 40px !important;
 }

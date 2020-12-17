@@ -5,40 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Carrusel</title>
+    <!-- cdns -->
+    <link rel="stylesheet" href="./assets/cdn/bootstrap.min.css" />
+    <script src="./assets/cdn/jquery.min.js"></script>
+    <script src="./assets/cdn/bootstrap.min.js"></script>
+    <script src="./assets/cdn/lodash.min.js"></script>
+    <link rel="stylesheet" href="./assets/cdn/normalize.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
-      href="./links/bootstrap.min.css"/>
-    <script src="./links/jquery.min.js"></script>
-    <script src="./links/bootstrap.min.js"></script>
-    <script src="./links/lodash.min.js"></script>
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./normalize.css" />
+    />
   </head>
 
   <body>
     <h1 class="title">Carousel Example</h1>
-    <!-- <div class="contenedor"> -->
-<a>
-<img src="./img/animex4.jpg" alt="" title="" />
-</a>
-<!-- </div> -->
-
+    <a>
+      <img
+        src="./assets/img/animex4.jpg"
+        alt="picture of a store"
+        title="picture of a store"
+      />
+    </a>
     <!-- botones de configuracion -->
 
     <!-- boton anterior -->
     <div class="direction">
       <div class="item">
         <button type="button" class="btn btn-primary" id="prev-style">
-          Anterior
+          previous
         </button>
       </div>
 
       <!-- Botones radio -->
       <div class="item">
-        <div class="custom-control custom-radio ">
+        <div class="custom-control custom-radio">
           <input
             type="radio"
-            class="custom-control-input "
+            class="custom-control-input"
             id="defaultUnchecked"
             name="defaultExampleRadios"
             value="flex-start"
@@ -48,7 +55,7 @@
           >
           <input
             type="radio"
-            class="custom-control-input "
+            class="custom-control-input"
             id="defaultUnchecked"
             name="defaultExampleRadios"
             value="center"
@@ -59,7 +66,7 @@
           >
           <input
             type="radio"
-            class="custom-control-input "
+            class="custom-control-input"
             id="defaultUnchecked"
             name="defaultExampleRadios"
             value="flex-end"
@@ -73,7 +80,7 @@
       <!-- Botton Siguiente -->
       <div class="item">
         <button type="button" class="btn btn-primary" id="next-style">
-          Siguiente
+          next
         </button>
       </div>
     </div>
@@ -124,14 +131,14 @@
       </button>
     </div>
 
-<div class="boxContainer">
-  <div>Codigo Fuente:</div>
-  <div>
-    <a href="https://github.com/jhosep98/Carrusel" target="blank">GitHub</a>
-  </div>
-</div>
+    <div class="boxContainer">
+      <div>
+        <a href="https://github.com/jhosep98/Carrusel" target="blank"
+          >View on GitHub</a
+        >
+      </div>
+    </div>
     <!-- JAvaScript -->
-
     <script src="./app.js"></script>
   </body>
 </html>
