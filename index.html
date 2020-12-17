@@ -87,37 +87,35 @@
 
       <!-- muestra el numero de efecto -->
       <div class="container-controls__effect">
-        <label for="inputAccount">Efecto: </label>
+        <label for="inputAccount">Effect: </label>
         <input type="text" class="inputEfect" id="account" />
       </div>
 
       <!-- inputs Width and height -->
 
       <form class="container-controls__form">
-        <div class="form-group">
-          <label for="width">Width</label>
-          <input
-            id="width"
-            class="form-control mx-sm-3"
-            type="number"
-            name="imgheight"
-            value="357"
-            min="1"
-            max="30000"
-            onchange="sizeWidth(this.value)"
-          />
-          <label for="height">Height</label>
-          <input
-            id="height"
-            class="form-control mx-sm-3"
-            type="number"
-            value="200"
-            name="valueheight"
-            min="1"
-            max="30000"
-            onchange="sizeHeight(this.value)"
-          />
-        </div>
+        <label for="width">Width</label>
+        <input
+          id="width"
+          class="form-control mx-sm-3"
+          type="number"
+          name="imgheight"
+          value="357"
+          min="1"
+          max="30000"
+          onchange="sizeWidth(this.value)"
+        />
+        <label for="height">Height</label>
+        <input
+          id="height"
+          class="form-control mx-sm-3"
+          type="number"
+          value="200"
+          name="valueheight"
+          min="1"
+          max="30000"
+          onchange="sizeHeight(this.value)"
+        />
       </form>
 
       <!-- caja de la imagen -->
@@ -126,18 +124,16 @@
       </div>
 
       <div class="container-controls__copy">
-        <button type="button" class="btn btn-primary" onclick="copy()">
-          Copy
-        </button>
+        <button type="button" class="btn" onclick="copy()">Copy</button>
       </div>
     </main>
 
-    <footer>
-      <div>
+    <footer class="footer">
+      <p>
         <a href="https://github.com/jhosep98/Carrusel" target="blank"
           >View on GitHub</a
         >
-      </div>
+      </p>
     </footer>
 
     <!-- JAvaScript -->

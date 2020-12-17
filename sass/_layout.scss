@@ -1,21 +1,7 @@
-@mixin button-bg($bg) {
-  background: $bg;
-  &:hover {
-    background: darken($bg, 8%);
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background: darken($bg, 25%);
-  }
-}
-.btn-blue {
-  color: white;
-  text-decoration: none;
-  padding: 2px 5px;
-  border-radius: 2px;
-  font-size: 1.2em;
-  border: none;
-  width: 120px;
+body {
+  @include container-flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .header {
@@ -27,27 +13,4 @@
 .container {
   @include container-flex;
   flex-direction: column;
-}
-
-.container-controls {
-  margin: 1.2rem 0;
-  width: 100%;
-  .container-controls__button {
-    @include container-flex;
-    justify-content: space-around;
-    .btn {
-      @include button-bg(#3498db);
-      @extend .btn-blue;
-    }
-  }
-  .container-controls__inputs {
-    @include container-flex;
-    justify-content: center;
-    margin: 1.2rem 0;
-    form {
-      input {
-        margin: 0.4rem;
-      }
-    }
-  }
 }
