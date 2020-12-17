@@ -190,8 +190,8 @@ $((_) => {
 
     $("#account").val(currentStyleIndex + 1);
 
-    const $preview = $("a");
-    const $previewImage = $("a > img");
+    const $preview = $(".container-background");
+    const $previewImage = $(".container-background > img");
 
     $preview.attr("style", "");
     $previewImage.attr("style", "");

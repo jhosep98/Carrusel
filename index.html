@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Carrusel</title>
     <!-- cdns -->
-    <link rel="stylesheet" href="./assets/cdn/bootstrap.min.css" />
     <script src="./assets/cdn/jquery.min.js"></script>
     <script src="./assets/cdn/bootstrap.min.js"></script>
     <script src="./assets/cdn/lodash.min.js"></script>
     <link rel="stylesheet" href="./assets/cdn/normalize.css" />
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -22,77 +21,79 @@
   </head>
 
   <body>
-    <h1 class="title">Carousel Example</h1>
-    <a>
-      <img
-        src="./assets/img/animex4.jpg"
-        alt="picture of a store"
-        title="picture of a store"
-      />
-    </a>
-    <!-- botones de configuracion -->
+    <header class="header">
+      <h1 class="header-title">Effects for images</h1>
+    </header>
 
-    <!-- boton anterior -->
-    <div class="direction">
-      <div class="item">
-        <button type="button" class="btn btn-primary" id="prev-style">
-          previous
-        </button>
+    <main class="container">
+      <div class="container-background">
+        <img
+          src="./assets/img/animex4.jpg"
+          alt="picture of a store"
+          title="picture of a store"
+        />
       </div>
 
-      <!-- Botones radio -->
-      <div class="item">
-        <div class="custom-control custom-radio">
-          <input
-            type="radio"
-            class="custom-control-input"
-            id="defaultUnchecked"
-            name="defaultExampleRadios"
-            value="flex-start"
-          />
-          <label class="custom-control-label" for="defaultUnchecked"
-            >Left</label
-          >
-          <input
-            type="radio"
-            class="custom-control-input"
-            id="defaultUnchecked"
-            name="defaultExampleRadios"
-            value="center"
-            checked
-          />
-          <label class="custom-control-label" for="defaultUnchecked"
-            >Center</label
-          >
-          <input
-            type="radio"
-            class="custom-control-input"
-            id="defaultUnchecked"
-            name="defaultExampleRadios"
-            value="flex-end"
-          />
-          <label class="custom-control-label" for="defaultUnchecked"
-            >Right</label
-          >
+      <!-- botones de configuracion -->
+
+      <!-- boton anterior -->
+      <div class="container-controls">
+        <!-- Button previous -->
+        <div class="container-controls__button">
+          <button type="button" class="btn" id="prev-style">previous</button>
+
+          <!-- Botton Next -->
+          <button type="button" class="btn" id="next-style">next</button>
+        </div>
+
+        <!-- Botones radio -->
+        <div class="container-controls__inputs">
+          <form>
+            <input
+              type="radio"
+              class="custom-control-input"
+              id="defaultUnchecked"
+              name="defaultExampleRadios"
+              value="flex-start"
+            />
+            <label class="custom-control-label" for="defaultUnchecked"
+              >Left</label
+            >
+            <input
+              type="radio"
+              class="custom-control-input"
+              id="defaultUnchecked"
+              name="defaultExampleRadios"
+              value="center"
+              checked
+            />
+
+            <label class="custom-control-label" for="defaultUnchecked"
+              >Center</label
+            >
+            <input
+              type="radio"
+              class="custom-control-input"
+              id="defaultUnchecked"
+              name="defaultExampleRadios"
+              value="flex-end"
+            />
+            <label class="custom-control-label" for="defaultUnchecked"
+              >Right</label
+            >
+          </form>
         </div>
       </div>
 
-      <!-- Botton Siguiente -->
-      <div class="item">
-        <button type="button" class="btn btn-primary" id="next-style">
-          next
-        </button>
+      <!-- muestra el numero de efecto -->
+      <div class="container-controls__effect">
+        <label for="inputAccount">Efecto: </label>
+        <input type="text" class="inputEfect" id="account" />
       </div>
-    </div>
-    <!-- muestra el numero de efecto -->
-    <div class="numberEfect">
-      <label for="inputAccount">Efecto: </label>
-      <input type="text" class="inputEfect" id="account" />
-    </div>
 
-    <!-- inputs Width and height -->
-    <div class="resolution">
-      <form class="form-inline">
+      <!-- inputs Width and height -->
+
+      <form class="container-controls__form">
         <div class="form-group">
           <label for="width">Width</label>
           <input
@@ -118,26 +119,27 @@
           />
         </div>
       </form>
-    </div>
 
-    <!-- caja de la imagen -->
-    <div class="contenedordecaja">
-      <textarea class="box" id="textarea"></textarea>
-    </div>
+      <!-- caja de la imagen -->
+      <div class="container-controls__containerImg">
+        <textarea class="box" id="textarea"></textarea>
+      </div>
 
-    <div class="copiar">
-      <button type="button" class="btn btn-primary" onclick="copy()">
-        Copy
-      </button>
-    </div>
+      <div class="container-controls__copy">
+        <button type="button" class="btn btn-primary" onclick="copy()">
+          Copy
+        </button>
+      </div>
+    </main>
 
-    <div class="boxContainer">
+    <footer>
       <div>
         <a href="https://github.com/jhosep98/Carrusel" target="blank"
           >View on GitHub</a
         >
       </div>
-    </div>
+    </footer>
+
     <!-- JAvaScript -->
     <script src="./app.js"></script>
   </body>
